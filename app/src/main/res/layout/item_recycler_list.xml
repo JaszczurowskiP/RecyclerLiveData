@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data class = "ItemBinding" >
+        <variable
+            name="Item"
+            type="com.jaszczurowskip.recyclerlivedata.datasource.ListItem"/>
+    </data>
+<android.support.constraint.ConstraintLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/root_list_item"
+    android:padding="5sp"
+    tools:context="com.jaszczurowskip.recyclerlivedata.features.list.ListActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgv_list_item"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:alpha=".86"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <ImageView
+        android:id="@+id/imgv_date"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_event"
+        app:layout_constraintBottom_toTopOf="@+id/label_message"
+        app:layout_constraintStart_toEndOf="@+id/imgv_list_item"
+        app:layout_constraintTop_toTopOf="@+id/imgv_list_item" />
+
+    <TextView
+        android:id="@+id/label_date"
+        style="@style/PrimaryText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:maxLines="1"
+        app:layout_constraintBottom_toTopOf="@+id/label_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imgv_date"
+        app:layout_constraintTop_toTopOf="@+id/imgv_list_item"
+        tools:text="3:43 17/10/2018" />
+
+    <TextView
+        android:id="@+id/label_message"
+        style="@style/SecondaryText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgv_list_item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgv_list_item"
+        app:layout_constraintTop_toBottomOf="@+id/label_date"
+        tools:text="content_description" />
+
+</android.support.constraint.ConstraintLayout>
+</layout>

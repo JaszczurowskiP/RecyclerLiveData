@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    <variable
+        name="backAction"
+        type="com.jaszczurowskip.recyclerlivedata.features.create.actions.OnBackButton"/>
+    <variable
+        name="doneAction"
+        type="com.jaszczurowskip.recyclerlivedata.features.create.actions.OnDoneButton"/>
+    </data>
+
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.create.CreateActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_create_drawable"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/div_center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <com.viewpagerindicator.UnderlinePageIndicator
+        android:id="@+id/vpi_create_drawable"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:padding="10dp"
+        app:radius="8dp"
+        app:fillColor="@color/colorTransparentWhite"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/div_center" />
+
+
+    <FrameLayout
+        android:id="@+id/cont_create_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginRight="0dp"
+        android:background="@color/colorTransparentBlack"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp">
+
+        <ImageButton
+            android:id="@+id/imb_create_back"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:onClick="@{(v)->backAction.backToList()}"
+            android:layout_gravity="left"
+            android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+        <ImageButton
+            android:id="@+id/imb_create_done"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:onClick="@{(v)->doneAction.addItemToDatabase()}"
+            android:layout_gravity="right"
+            android:src="@android:drawable/checkbox_on_background" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/div_center"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_create_message"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="Type some text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vpi_create_drawable"
+        app:layout_constraintVertical_bias="0.49" />
+</android.support.constraint.ConstraintLayout>
+</layout>
