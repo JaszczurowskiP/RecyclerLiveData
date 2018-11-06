@@ -31,7 +31,7 @@ public class Utils {
         ArrayList<String> listOfAllImages = new ArrayList<>();
         String absolutePathOfImage;
         uri = android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI;
-        String[] projection = { MediaStore.MediaColumns.DATA };
+        String[] projection = {MediaStore.MediaColumns.DATA};
         cursor = activity.getContentResolver().query(uri, projection, null,
                 null, null);
         column_index = Objects.requireNonNull(cursor).getColumnIndexOrThrow(MediaStore.MediaColumns.DATA);
@@ -55,9 +55,9 @@ public class Utils {
                             Manifest.permission.READ_EXTERNAL_STORAGE);
                 } else {
                     ActivityCompat.requestPermissions(
-                                    (Activity) context,
-                                    new String[] { Manifest.permission.READ_EXTERNAL_STORAGE },
-                                    MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+                            (Activity) context,
+                            new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                            MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
                 }
                 return false;
             } else {
@@ -78,7 +78,7 @@ public class Utils {
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         ActivityCompat.requestPermissions((Activity) context,
-                                new String[] { permission },
+                                new String[]{permission},
                                 MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
                     }
                 });
@@ -86,7 +86,7 @@ public class Utils {
         alert.show();
     }
 
-    public static  void showToastMessage(Context context, String message){
+    public static void showToastMessage(Context context, String message) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
     }
 }

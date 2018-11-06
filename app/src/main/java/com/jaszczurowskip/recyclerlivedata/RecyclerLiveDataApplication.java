@@ -11,7 +11,7 @@ import com.jaszczurowskip.recyclerlivedata.di.RoomModule;
 /**
  * Created by jaszczurowskip on 16.10.2018
  */
-public class RecyclerLiveDataApplication extends Application{
+public class RecyclerLiveDataApplication extends Application {
     @NonNull
     private ApplicationComponent applicationComponent;
 

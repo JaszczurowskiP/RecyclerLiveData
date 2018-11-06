@@ -4,11 +4,11 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 
 import com.jaszczurowskip.recyclerlivedata.R;
-import com.jaszczurowskip.recyclerlivedata.features.list.ListFragment;
 import com.jaszczurowskip.recyclerlivedata.util.BaseActivity;
 
 public class StartActivity extends BaseActivity {
     private static final String START_FRAG = "START_FRAG";
+
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

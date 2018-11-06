@@ -34,7 +34,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.CustomView> {
     private Context context;
     private Activity activity;
 
-    public ListAdapter(List<ListItem> listOfData, Context context, Activity activity) {
+    ListAdapter(List<ListItem> listOfData, Context context, Activity activity) {
         this.listOfData = listOfData;
         this.context = context;
         this.activity = activity;

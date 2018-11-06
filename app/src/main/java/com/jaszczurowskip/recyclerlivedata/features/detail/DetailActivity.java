@@ -7,7 +7,6 @@ import android.widget.Toast;
 
 import com.jaszczurowskip.recyclerlivedata.R;
 import com.jaszczurowskip.recyclerlivedata.util.BaseActivity;
-
 /**
  * Created by jaszczurowskip on 12.10.2018
  */

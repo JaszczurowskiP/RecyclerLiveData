@@ -35,6 +35,6 @@ public class ListItemRepository {
     }
 
     public void deleteListItem(final ListItem listItem) {
-         listItemDao.deleteListItem(listItem);
+        listItemDao.deleteListItem(listItem);
     }
 }

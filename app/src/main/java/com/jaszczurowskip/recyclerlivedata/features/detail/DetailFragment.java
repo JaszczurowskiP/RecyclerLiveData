@@ -73,23 +73,22 @@ public class DetailFragment extends Fragment {
             public void onChanged(@Nullable ListItem listItem) {
                 if (listItem != null) {
                     fragmentDetailBinding.setDetail(listItem);
-                    //fragmentDetailBinding.imvColoredBackground.setImageResource(listItem.getColorResource());
                     Glide.with(getActivity()).load(listItem.getImgResourcePath()).into(fragmentDetailBinding.imvColoredBackground);
-                    Utils.showToastMessage(getContext(), String.valueOf(listItem.getImgResourcePath()));
+                    //Utils.showToastMessage(getContext(), String.valueOf(listItem.getImgResourcePath()));
                 }
             }
         });
     }
 
     @Override
-    public View onCreateView(@NonNull final LayoutInflater inflater, final  ViewGroup container,
+    public View onCreateView(@NonNull final LayoutInflater inflater, final ViewGroup container,
                              final Bundle savedInstanceState) {
         fragmentDetailBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail, container, false);
-        View v =fragmentDetailBinding.getRoot();
+        View v = fragmentDetailBinding.getRoot();
         fragmentDetailBinding.setEditAction(new OnEditButton() {
             @Override
             public void editListItem() {
-                if(Utils.checkPermission_READ_EXTERNAL_STORAGE(getContext())){
+                if (Utils.checkPermission_READ_EXTERNAL_STORAGE(getContext())) {
                     Intent i = new Intent(getActivity(), CreateActivity.class);
                     i.putExtra(EXTRA_ITEM_ID, itemId);
                     startActivity(i);

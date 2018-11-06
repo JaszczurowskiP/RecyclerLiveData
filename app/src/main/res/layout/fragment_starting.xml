@@ -2,59 +2,63 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
+
         <variable
             name="createPhotoAction"
-            type="com.jaszczurowskip.recyclerlivedata.features.startingscreen.actions.OnCreatePhoto"/>
+            type="com.jaszczurowskip.recyclerlivedata.features.startingscreen.actions.OnCreatePhoto" />
+
         <variable
             name="browseGalleryAction"
-            type="com.jaszczurowskip.recyclerlivedata.features.startingscreen.actions.OnGalleryBrowse"/>
+            type="com.jaszczurowskip.recyclerlivedata.features.startingscreen.actions.OnGalleryBrowse" />
     </data>
 
-<android.support.constraint.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".features.startingscreen.StartingFragment">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".features.startingscreen.StartingFragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="200dp"
-        android:gravity="center"
-        android:text="@string/gallery_application"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-    <Button
-        android:id="@+id/add_new_photo_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/add_new_photo"
-        android:onClick="@{(v)->createPhotoAction.createPhoto()}"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="200dp"
+            android:gravity="center"
+            android:text="@string/gallery_application"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/browse_gallery_photo_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:onClick="@{(v)->browseGalleryAction.browseGallery()}"
-        android:text="@string/gallery"
-        app:layout_constraintEnd_toEndOf="@+id/add_new_photo_button"
-        app:layout_constraintStart_toStartOf="@+id/add_new_photo_button"
-        app:layout_constraintTop_toBottomOf="@+id/add_new_photo_button" />
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/add_new_photo_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:onClick="@{(v)->createPhotoAction.createPhoto()}"
+            android:text="@string/add_new_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <Button
+            android:id="@+id/browse_gallery_photo_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:onClick="@{(v)->browseGalleryAction.browseGallery()}"
+            android:text="@string/gallery"
+            app:layout_constraintEnd_toEndOf="@+id/add_new_photo_button"
+            app:layout_constraintStart_toStartOf="@+id/add_new_photo_button"
+            app:layout_constraintTop_toBottomOf="@+id/add_new_photo_button" />
+    </android.support.constraint.ConstraintLayout>
 </layout>

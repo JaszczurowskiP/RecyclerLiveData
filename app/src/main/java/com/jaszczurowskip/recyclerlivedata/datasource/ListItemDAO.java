@@ -26,6 +26,5 @@ public interface ListItemDAO {
 
     @Delete()
     void deleteListItem(final ListItem listItem);
-
 }
 

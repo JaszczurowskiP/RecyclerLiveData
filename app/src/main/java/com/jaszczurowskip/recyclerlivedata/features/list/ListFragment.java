@@ -79,11 +79,11 @@ public class ListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         fragmentListBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_list, container, false);
-        View v =fragmentListBinding.getRoot();
+        View v = fragmentListBinding.getRoot();
         fragmentListBinding.setAddAction(new OnAddButton() {
             @Override
             public void addListItem() {
-                if(Utils.checkPermission_READ_EXTERNAL_STORAGE(getContext())){
+                if (Utils.checkPermission_READ_EXTERNAL_STORAGE(getContext())) {
                     startCreateActivity();
                 }
             }

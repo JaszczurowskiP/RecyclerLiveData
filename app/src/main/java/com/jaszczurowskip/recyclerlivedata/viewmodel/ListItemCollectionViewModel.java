@@ -15,9 +15,7 @@ import java.util.List;
 import java.util.concurrent.Callable;
 
 import io.reactivex.Single;
-import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by jaszczurowskip on 18.10.2018
@@ -32,7 +30,7 @@ public class ListItemCollectionViewModel extends ViewModel {
     }
 
     public LiveData<List<ListItem>> getListItems() {
-            return repository.getListOfData();
+        return repository.getListOfData();
     }
 
     @SuppressLint("CheckResult")

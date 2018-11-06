@@ -3,7 +3,6 @@ package com.jaszczurowskip.recyclerlivedata.viewmodel;
 import android.annotation.SuppressLint;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.ViewModel;
-import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
@@ -15,7 +14,6 @@ import java.util.concurrent.Callable;
 
 import io.reactivex.Single;
 import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.Schedulers;
 
 /**
  * Created by jaszczurowskip on 18.10.2018
@@ -39,11 +37,11 @@ public class CreateListItemViewModel extends ViewModel {
         }).subscribeOn(AppSchedulersProvider.getInstance().io())
                 .subscribeOn(AppSchedulersProvider.getInstance().ui())
                 .subscribe(new Consumer<Long>() {
-            @Override
-            public void accept(Long aLong) {
-                // no-op
-            }
-        }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Long aLong) {
+                        // no-op
+                    }
+                }, new Consumer<Throwable>() {
                     @Override
                     public void accept(Throwable throwable) throws Exception {
                         Log.d(TAG, "Error: " + throwable.getMessage());

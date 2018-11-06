@@ -1,14 +1,9 @@
 package com.jaszczurowskip.recyclerlivedata.di;
 
-import android.app.Application;
-import android.content.Context;
-
 import com.jaszczurowskip.recyclerlivedata.features.create.CreateFragment;
 import com.jaszczurowskip.recyclerlivedata.features.detail.DetailFragment;
 import com.jaszczurowskip.recyclerlivedata.features.list.ListFragment;
 import com.jaszczurowskip.recyclerlivedata.features.startingscreen.StartingFragment;
-
-import javax.inject.Singleton;
 
 import dagger.Component;
 
@@ -20,8 +15,11 @@ import dagger.Component;
 public interface ApplicationComponent {
 
     void inject(ListFragment listFragment);
+
     void inject(CreateFragment createFragment);
+
     void inject(DetailFragment detailFragment);
+
     void inject(StartingFragment startingFragment);
 
 }

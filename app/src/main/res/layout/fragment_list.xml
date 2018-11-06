@@ -2,44 +2,45 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <data>
+
         <variable
             name="addAction"
-            type="com.jaszczurowskip.recyclerlivedata.features.list.actions.OnAddButton">
-        </variable>
+            type="com.jaszczurowskip.recyclerlivedata.features.list.actions.OnAddButton" />
     </data>
 
-<android.support.constraint.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorTransparentBlack"
-    android:id="@+id/root_list_fragment"
-    tools:context=".features.list.ListActivity">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/root_list_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorTransparentBlack"
+        tools:context=".features.list.ListActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_list_activity"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_list_activity"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/add_data_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        android:layout_marginEnd="24dp"
-        android:src="@drawable/ic_add"
-        app:elevation="6dp"
-        app:fabSize="normal"
-        android:onClick="@{(v)->addAction.addListItem()}"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:rippleColor="@color/colorTransparentBlack" />
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_data_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:layout_marginEnd="24dp"
+            android:onClick="@{(v)->addAction.addListItem()}"
+            android:src="@drawable/ic_add"
+            app:elevation="6dp"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/colorTransparentBlack" />
 
-</android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
 </layout>

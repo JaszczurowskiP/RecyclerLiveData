@@ -1,11 +1,8 @@
 package com.jaszczurowskip.recyclerlivedata.di;
 
 import android.app.Application;
-import android.content.Context;
 
 import com.jaszczurowskip.recyclerlivedata.RecyclerLiveDataApplication;
-
-import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;

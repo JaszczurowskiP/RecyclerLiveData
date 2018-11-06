@@ -1,68 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="detail"
             type="com.jaszczurowskip.recyclerlivedata.datasource.ListItem" />
+
         <variable
             name="editAction"
             type="com.jaszczurowskip.recyclerlivedata.features.detail.actions.OnEditButton" />
     </data>
-<RelativeLayout
-    android:id="@+id/root_activity_detail"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="features.detail.DetailActivity">
 
-    <ImageView
-        android:id="@+id/imv_colored_background"
+    <RelativeLayout
+        android:id="@+id/root_activity_detail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/div_center"
-        android:scaleType="centerCrop"
-        android:transitionName="@string/transition_drawable" />
+        tools:context="features.detail.DetailActivity">
 
-    <TextView
-        android:id="@+id/lbl_date_and_time_header"
-        style="@style/PrimaryText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/lbl_message_body"
-        android:background="@color/colorTransparentBlack"
-        android:padding="16dp"
-        android:transitionName="@string/transition_date_and_time"
-        android:text="@{detail.itemId}" />
+        <ImageView
+            android:id="@+id/imv_colored_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/div_center"
+            android:scaleType="centerCrop"
+            android:transitionName="@string/transition_drawable" />
 
-    <View
-        android:id="@+id/div_center"
-        style="@style/PrimaryText"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/lbl_date_and_time_header"
+            style="@style/PrimaryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lbl_message_body"
+            android:background="@color/colorTransparentBlack"
+            android:padding="16dp"
+            android:text="@{detail.itemId}"
+            android:transitionName="@string/transition_date_and_time" />
 
-    <TextView
-        android:id="@+id/lbl_message_body"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/div_center"
-        android:padding="16dp"
-        android:text="@{detail.message}"
-        android:transitionName="@string/transition_message" />
+        <View
+            android:id="@+id/div_center"
+            style="@style/PrimaryText"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true" />
 
-    <Button
-        android:id="@+id/edit_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/lbl_date_and_time_header"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="20sp"
-        android:layout_marginRight="20sp"
-        android:layout_marginLeft="20sp"
-        android:background="@color/colorTransparentWhite"
-        android:onClick="@{(v)->editAction.editListItem()}"
-        android:text="@string/edit" />
-</RelativeLayout>
+        <TextView
+            android:id="@+id/lbl_message_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/div_center"
+            android:padding="16dp"
+            android:text="@{detail.message}"
+            android:transitionName="@string/transition_message" />
+
+        <Button
+            android:id="@+id/edit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lbl_date_and_time_header"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="20sp"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:background="@color/colorTransparentWhite"
+            android:onClick="@{(v)->editAction.editListItem()}"
+            android:text="@string/edit" />
+    </RelativeLayout>
 </layout>
